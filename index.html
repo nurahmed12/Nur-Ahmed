@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nur Ahmed - Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="main">
+            <div id="home" class="infoContainer">
+                <div class="devInfo">
+                    <img src="Profile Picture 1.png" alt="Profile Picture of Nur Ahmed">
+                    <div class="hello">Hello, I am</div>
+                    <div class="name">Nur Ahmed</div>
+                    <div class="about">Software Engineer, Data Scientist, Artificial Intelligence Engineer</div>
+
+                    <!-- About Me Section -->
+                    <div class="about-me">
+                        <h2>About Me</h2>
+                        <p class="about-me-content">
+                            I am a passionate Data Scientist and Artificial Intelligence Engineer with a strong
+                            background in machine learning and data analysis. My expertise lies in developing
+                            innovative solutions to complex problems, leveraging my skills in Python, TensorFlow,
+                            and other cutting-edge technologies.
+                        </p>
+                    </div>
+
+                    <!-- Buttons Section -->
+                    <section id="buttons" class="buttons">
+                        <button class="project-btn" data-target="projects">My Projects</button>
+                        <button class="publication-btn" data-target="publications">My Publications</button>
+                        <button class="resume-btn" data-target="resume">My Resume</button>
+                        <button class="cv-btn">Download CV</button>
+                        <button class="contact-btn" data-target="contact">Contact Me</button>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Projects Section -->
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <!-- Add more project items as needed -->
+        </section>
+
+        <!-- My Publications Section -->
+        <section id="publications" class="section">
+            <h2>My Publications</h2>
+            <!-- Add content for My Publications here -->
+        </section>
+
+        <!-- My Resume Section -->
+        <section id="resume" class="section">
+            <h2>My Resume</h2>
+            <!-- Add content for My Resume here -->
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <!-- Add content for Contact Me here -->
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn">&#8593;</button>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelectorAll('.buttons button').forEach(button => {
+            button.addEventListener('click', function () {
+                const targetSection = this.getAttribute('data-target');
+                document.querySelector('#' + targetSection).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top Button Functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        backToTopBtn.addEventListener('click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+
+</html>
